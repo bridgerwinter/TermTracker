@@ -1,4 +1,4 @@
-# TermTracker
+# TermTracker : iOS and Android Mobile Application Developed in C# with Xamarin.
 Mobile app, developed with Xamarin. Available in iOS and Android.
 
 
