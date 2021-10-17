@@ -1,5 +1,13 @@
 # TermTracker : iOS and Android Mobile Application Developed in C# with Xamarin.
-Mobile app, developed with Xamarin. Available in iOS and Android.
+
+Tech Stack
+
+Language: C#, Xamarin/Xaml
+
+Database: SQLite 
+
+Target Platform: iOS and Android
+
 
 
 I created a course and term tracker with Xamarin. It comes pre-seeded with example courses and terms. The ability to update, delete, and add any course, or term. Push notifications are able to be set for the start and end of a term, as well as any upcoming exams. You can also output the course notes via email. All data is bound and is updated as soon as you create the new course or term. The database is using SQLite and is persistant between app sessions. 
