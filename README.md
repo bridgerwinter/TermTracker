@@ -1,12 +1,9 @@
 # TermTracker : iOS and Android Mobile Application Developed in C# with Xamarin.
 
-Tech Stack
-
-Language: C#, Xamarin/Xaml
-
-Database: SQLite 
-
-Target Platform: iOS and Android
+**Tech Stack**  
+Language: **C#, Xamarin/Xaml**  
+Database: **SQLite**   
+Target Platform: **iOS and Android** 
 
 
 
