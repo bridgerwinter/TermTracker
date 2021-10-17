@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermTracker.Model.ShareNotes">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!--<BoxView BackgroundColor="Red" Grid.Row="0" Grid.Column="0"/>
+		<BoxView BackgroundColor="Green" Grid.Row="1" Grid.Column="1"/>
+		<BoxView BackgroundColor="Blue" Grid.Row="1" Grid.Column="2"/>-->
+		<Label Text="Share Notes via Email" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="Large" TextColor="Black" HorizontalOptions="Center"/>
+		<Label Text="To:" Grid.Row="1" Grid.Column="0" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center"/>
+		<Entry x:Name="toAddress" Placeholder="someone@example.com"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+		<Label Text="Select Notes to Share" Grid.Row="2" Grid.ColumnSpan="4" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center"/>
+		
+		<Label Text="Course Info" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium"/>
+		<CheckBox x:Name="checkboxCourseInfo" Grid.Row="3" Grid.Column="1"/>
+		<Label Text="Course Instructor" Grid.Row="3" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Medium"/>
+		<CheckBox x:Name="checkboxCourseInstructor" Grid.Row="3" Grid.Column="3"/>
+		<Label Text="Assessment Info" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="Medium"/>
+		<CheckBox x:Name="checkboxAssessmentInfo" Grid.Row="4" Grid.Column="2"/>
+
+		<Button x:Name="sendNotesButton" Text="Send Selected Notes" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="sendNotesButton_Clicked"/>
+		<!--<BoxView BackgroundColor="DarkCyan" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>-->
+
+		<!--<Button Text="Send Notes" Clicked="Button_Clicked" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"/>-->
+
+		
+
+	</Grid>
+</ContentPage>

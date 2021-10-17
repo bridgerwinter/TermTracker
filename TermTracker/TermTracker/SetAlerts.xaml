@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermTracker.SetAlerts">
+	<ScrollView>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Label Text="Set Alerts" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="Large" TextColor="Black" HorizontalOptions="Center"/>
+			<!--
+			<Label Text="Start Term Alert: " Grid.Row="1" Grid.Column="0" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<CheckBox x:Name="checkboxStartTermAlert" Grid.Row="1" Grid.Column="1"/>
+			<Label Text="End Term Alert: " Grid.Row="1" Grid.Column="2" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<CheckBox x:Name="checkboxEndTermAlert" Grid.Row="1" Grid.Column="3"/>
+-->
+			<Label x:Name="labelPerformanceAssessment" Text="Performance Assessment Alert" Grid.Row="2" Grid.Column="0" IsVisible="False" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small"/>
+			<CheckBox x:Name="checkboxPerformanceAssessment" Grid.Row="2" Grid.Column="1" IsVisible="False"/>
+			<Label x:Name="labelObjectiveAssessment" Text="Objective Assessment Alert" Grid.Row="2" Grid.Column="2" IsVisible="False" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Small"/>
+			<CheckBox x:Name="checkboxObjectiveAssessment" Grid.Row="2" Grid.Column="3" IsVisible="False"/>
+
+			<Label Text="Start Course Alert: " Grid.Row="3" Grid.Column="0" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<CheckBox x:Name="checkboxStartCourseAlert" Grid.Row="3" Grid.Column="1"/>
+			<Label Text="End Course Alert: " Grid.Row="3" Grid.Column="2" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<CheckBox x:Name="checkboxEndCourseAlert" Grid.Row="3" Grid.Column="3"/>
+
+			<Button Text="Set Selected Alerts" Clicked="Button_Clicked" Grid.Row="4" Grid.ColumnSpan="4"/>
+		</Grid>
+	</ScrollView>
+</ContentPage>

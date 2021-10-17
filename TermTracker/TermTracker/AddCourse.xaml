@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermTracker.AddCourse">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+			<Entry x:Name="Course_Title" Placeholder="Course Title"/>
+			<Entry x:Name="Optional_Notes" Placeholder="Optional Notes"/>
+			<Entry x:Name="Course_Info" Placeholder="Course Info"/>
+			<Label Text="Start Date: "/>
+			<DatePicker x:Name="Start_Date" Format="D"/>
+			<Label Text="End Date: "/>
+			<DatePicker x:Name="End_Date" Format="D"/>
+			<Picker x:Name="Status" Title="Select Status of Course">
+				<Picker.ItemsSource>
+					<x:Array Type="{x:Type x:String}">
+						<x:String>In-Progress</x:String>
+						<x:String>Completed</x:String>
+						<x:String>Dropped</x:String>
+						<x:String>Plan to Take</x:String>
+					</x:Array>
+				</Picker.ItemsSource>
+			</Picker>
+			<!--Performance Assessments-->
+			<Label Text="Performance Assessment: " VerticalOptions="Center"/>
+			<CheckBox x:Name="pAssessmentBox" IsChecked="False" VerticalOptions="Center" CheckedChanged="pAssessmentBox_CheckedChanged" />
+			<!--Conditional for Performance Assessment-->
+			<Label x:Name="pStartLabel" Text="Performance Assessment Start Date: " IsVisible="False"/>
+			<DatePicker x:Name="pStart" Format="D" IsVisible="False"/>
+			<Label x:Name="pEndLabel" Text="Performance Assessment End Date: " IsVisible="False"/>
+			<DatePicker x:Name="pEnd" Format="D" IsVisible="False"/>
+			<Entry x:Name="pNotes" Placeholder="Assessment Name / Assessment Notes" IsVisible="False"/>
+			<!--Objective Assessments-->
+			<Label Text="Objective Assessment: " VerticalOptions="Center"/>
+			<CheckBox x:Name="oAssessmentBox" IsChecked="False" VerticalOptions="Center" CheckedChanged="oAssessmentBox_CheckedChanged"/>
+			<!--Conditional for Objective Assessment-->
+			<Label x:Name="oStartLabel" Text="Objective Assessment Start Date: " IsVisible="False"/>
+			<DatePicker x:Name="oStart" Format="D" IsVisible="False"/>
+			<Label x:Name="oEndLabel" Text="Objective Assessment End Date: " IsVisible="False"/>
+			<DatePicker x:Name="oEnd" Format="D" IsVisible="False"/>
+			<Entry x:Name="oNotes" Placeholder="Assessment Name / Assessment Notes" IsVisible="False"/>
+			<Entry x:Name="CI_Name" Placeholder="Name"/>
+			<Entry x:Name="CI_Phone" Placeholder="Phone"/>
+			<Entry x:Name="CI_Email" Placeholder="Email"/>
+			<Entry x:Name="Term" Placeholder="Term Number"/>
+			<Button Text="Add" x:Name="addButton" Clicked="addButton_Clicked"/>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

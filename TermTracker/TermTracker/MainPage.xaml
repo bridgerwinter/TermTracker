@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermTracker.MainPage"
+			 xmlns:local="clr-namespace:TermTracker">
+
+	<TabbedPage.ToolbarItems>
+		<ToolbarItem Text="Add Course" x:Name="addCourse"
+					 Clicked="addCourse_Clicked"/>
+		<ToolbarItem Text="Add Term"
+					 x:Name="addTerm" Clicked="addTerm_Clicked"/>
+	</TabbedPage.ToolbarItems>
+
+	<ContentPage Title="Course Overview">
+		<ListView x:Name="termView"
+			  ItemSelected="termView_ItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding courseTitle}" TextColor="White"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage>
+
+	<ContentPage Title="Term Overview">
+		<ListView x:Name="semesters"
+				  ItemSelected="semesters_ItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout Orientation="Horizontal">
+								<Label Text="Date Start:" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								<Label Text="{Binding termStart}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								<Label Text="Date End:" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								<Label Text="{Binding termEnd}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								<!--
+								<Label Text="Term  " VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								<Label Text="{Binding termVal}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+								-->
+								<Label Text="{Binding termTitle}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small"/>
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage>
+	
+</TabbedPage>
